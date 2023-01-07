@@ -10,7 +10,7 @@ const RNScrollView = ({ children, styles, showHorizontalIndicator, showVerticalI
             showsHorizontalScrollIndicator = {( showHorizontalIndicator ) ? true : false}
             showsVerticalScrollIndicator = {( showVerticalIndicator ) ? true : false}
             contentContainerStyle = {{
-                flex: 1,
+                width: "100%",
                 alignItems: "center",
                 backgroundColor: Theme.light.grey,
                 ...styles

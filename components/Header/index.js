@@ -21,7 +21,7 @@ const ListItem = (params) => {
             />
 }
 
-const Header = () => {
+const Header = ({ styles }) => {
 
     const Theme = useContext(ThemeContext);
 
@@ -52,7 +52,18 @@ const Header = () => {
 
     
     return (
-        <>
+        <View 
+            style={{
+                width: Dimensions.get("screen").width,
+                paddingHorizontal: 10,
+                borderBottomLeftRadius: 25,
+                borderBottomRightRadius: 25,
+                backgroundColor: Theme.light.grey,
+                paddingTop: 20,
+                paddingBottom: 30,
+                ...styles
+            }}
+        >
             <View style={{ 
                     width: "100%",
                     flexDirection: "row",
@@ -113,9 +124,7 @@ const Header = () => {
                     horizontal
                 />
             </View>
-
-            
-        </>
+        </View>
     );
 }
 

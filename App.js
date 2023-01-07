@@ -5,8 +5,15 @@ import { useFonts } from "expo-font";
 import ThemeProvider from "./context/ThemeContext";
 
 /* Custom Components */
-import { Header } from "./components";
 import { ScrollView, StatusBar } from "./globals/CustomComponents";
+
+/* Screens */
+import { Home } from "./screens";
+
+/* Navigations */
+import { NavigationContainer } from '@react-navigation/native';
+import ButtomTabNavigator from "./navigation/ButtomTabNavigation";
+
 
 const App = () => {
 
@@ -24,16 +31,9 @@ const App = () => {
   return (
     <ThemeProvider>
       <StatusBar />
-
-      <ScrollView
-        styles={{
-          paddingHorizontal : 15,
-          paddingVertical: 20
-        }}
-      >
-        <Header />
-      </ScrollView>
-
+      <NavigationContainer>
+        <ButtomTabNavigator/>
+      </NavigationContainer>
     </ThemeProvider>
   );
 }
